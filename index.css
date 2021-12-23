@@ -5,6 +5,19 @@ body {
   background-color: #1f1f1f;
   color: #fff;
   margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+p {
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 header {
@@ -48,6 +61,7 @@ header {
   color: white;
   background-color: rgba(0, 0, 0, 0.55);
   border: 1px solid rgb(49, 49, 49);
+  outline: none !important;
 }
 
 .header-middle button {
@@ -64,23 +78,25 @@ header {
   gap: 20px;
 }
 
-.header-right .icons {
+.icons {
   width: 30px;
-  height: 33px;
+  height: 30px;
 }
 
-.header-right .profile {
+.profile {
   border-radius: 50%;
 }
 
-header img {
+header img,
+.subscribe img,
+.views img {
   width: 20px;
   height: 22px;
   cursor: pointer;
 }
 
 section {
-  width: 90%;
+  width: 95%;
   height: 1500px;
   margin: auto;
   background-color: #1f1f1f;
@@ -94,8 +110,13 @@ section {
   display: flex;
   flex-direction: column;
   flex: 2;
-  background-color: blueviolet;
+  background-color: #1f1f1f;
   height: 100%;
+}
+
+.left .profile {
+  width: 40px;
+  height: 40px;
 }
 
 .left .video {
@@ -109,10 +130,177 @@ section {
   height: 100%;
 }
 
+.video-desc {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #282828fa;
+}
+
+.video-desc .title h2 {
+  margin-bottom: 0;
+}
+
+.video-desc .views {
+  display: flex;
+  justify-content: space-between;
+  color: #aaa;
+}
+
+.video-desc .views .views-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  gap: 20px;
+  font-size: 0.8rem;
+}
+
+.video-desc .views .views-icons .icons-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid #aaa;
+  height: 95%;
+}
+
+.video-desc .views .views-icons .icons-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 95%;
+}
+
+.channel-desc {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 20px;
+  border-bottom: 1px solid #282828fa;
+}
+
+.channel-desc .channel-profile {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.channel-desc .channel-profile-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel-desc .channel-profile-desc div {
+  display: flex;
+  gap: 5px;
+}
+
+.channel-desc .channel-profile-desc img {
+  width: 1rem;
+}
+
+.channel-desc .channel-profile-desc h3 {
+  margin: 0;
+}
+
+.channel-desc .channel-profile-desc p {
+  margin-top: 0;
+  color: #aaa;
+}
+
+.channel-desc .subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.channel-desc .subscribe-btn {
+  padding: 10px;
+  border-style: none;
+  background-color: #393939;
+  color: #fff;
+  cursor: pointer;
+}
+
 .left .comments {
   flex: 3;
   width: 100%;
-  background-color: darkcyan;
+  background-color: #1f1f1f;
+  margin-top: 1rem;
+}
+
+.comments .comment-count {
+  display: flex;
+  gap: 10px;
+}
+
+.comments .comment-count p {
+  font-size: 1rem;
+}
+
+.comments .grey {
+  color: #aaa;
+  font-weight: bold;
+}
+
+.comments .your-comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+  background-color: #1f1f1f;
+}
+
+.comments .your-comment .comment-input {
+  flex-grow: 1;
+  align-self: self-start;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #393939;
+  outline: none !important;
+  color: white;
+}
+
+.comments .comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comments .comment-list .comment {
+  background-color: #1f1f1f;
+  display: flex;
+  gap: 10px;
+}
+
+.comment .comment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.comment p {
+  margin: 0;
+}
+
+.comment .comment-info div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #aaa;
+}
+
+.comment-info span {
+  font-size: 0.7rem;
+}
+
+.comment-info div .small-icons {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
 }
 
 .right {
@@ -146,4 +334,10 @@ section {
 .thumbnail .text {
   width: 200px;
   background-color: darkslategrey;
+}
+
+hr {
+  width: 100%;
+  background-color: #282828fa;
+  border: 1px solid #282828fa;
 }
