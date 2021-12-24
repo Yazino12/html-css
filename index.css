@@ -56,8 +56,8 @@ header {
 
 .header-middle .search-input {
   flex: 1;
-  padding: 5px;
-  font-size: 1rem;
+  padding: 9px;
+  font-size: 0.9rem;
   color: white;
   background-color: rgba(0, 0, 0, 0.55);
   border: 1px solid rgb(49, 49, 49);
@@ -89,7 +89,8 @@ header {
 
 header img,
 .subscribe img,
-.views img {
+.views img,
+.thumb-icon img {
   width: 20px;
   height: 22px;
   cursor: pointer;
@@ -100,8 +101,8 @@ section {
   height: 1500px;
   margin: auto;
   background-color: #1f1f1f;
-  display: flex;
   flex-wrap: wrap;
+  display: flex;
   justify-content: center;
   gap: 30px;
 }
@@ -109,9 +110,9 @@ section {
 .left {
   display: flex;
   flex-direction: column;
-  flex: 2;
+  flex: 3.4;
   background-color: #1f1f1f;
-  height: 100%;
+  height: auto;
 }
 
 .left .profile {
@@ -120,9 +121,8 @@ section {
 }
 
 .left .video {
-  flex: 2;
+  height: 43.75rem;
   width: 100%;
-  background-color: cornflowerblue;
 }
 
 .video iframe {
@@ -306,38 +306,142 @@ section {
 .right {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  background-color: chocolate;
-  height: 100%;
+  height: auto;
+  gap: 10px;
 }
 
 .right .buttons {
-  background-color: darkmagenta;
+  padding: 10px 5px;
 }
 
-.right .next {
-  background-color: darkorange;
+.right .buttons a {
+  padding: 0.4rem 0.9rem;
+  margin-right: 1rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  background-color: #393939;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.right .buttons a:first-child {
+  color: #1f1f1f;
+  background-color: #fff;
 }
 
 .right .thumbnail {
   display: flex;
   width: 100%;
-  background-color: darkolivegreen;
+  background-color: #1f1f1f;
+  gap: 10px;
 }
 
-.thumbnail img {
+.thumbnail .thumb-img {
+  cursor: pointer;
+}
+
+.thumbnail .thumb-img-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 15px;
   width: 200px;
-  height: auto;
-  background-color: darkseagreen;
+  height: 110px;
+}
+
+.thumbnail .thumb-img-overlay .overlay-icons {
+  visibility: hidden;
+}
+
+.thumb-img-overlay .overlay-icons .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: 0.4rem 0.4rem 0 0;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-style: none;
+}
+
+.thumb-img-overlay .overlay-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.thumb-img-overlay .duration {
+  margin-right: 0.4rem;
+}
+
+.thumb-img-overlay .duration span {
+  padding: 0.1rem 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.719);
+}
+
+.thumbnail .thumb-img .bigger {
+  width: 200px;
+  height: 110px;
 }
 
 .thumbnail .text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   width: 200px;
-  background-color: darkslategrey;
+  flex: 2;
+}
+
+.thumbnail .text h3 {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 5px 0 0;
+  width: 90%;
+  cursor: pointer;
+}
+
+.thumbnail .text p {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin: 0;
+  cursor: pointer;
+}
+
+.thumbnail .thumb-icon {
+  visibility: hidden;
+  flex: 0.1;
+}
+
+.thumbnail .thumb-icon img {
+  margin-top: 0.5rem;
+  cursor: pointer;
 }
 
 hr {
   width: 100%;
   background-color: #282828fa;
   border: 1px solid #282828fa;
+}
+
+/* Enabling visibility for some items */
+
+.thumb-img-overlay:hover > .overlay-icons {
+  visibility: visible;
+}
+
+.thumbnail:hover > .thumb-icon {
+  visibility: visible;
+}
+
+@media (max-width: 900px) {
+  .right {
+    flex: 3.4;
+  }
 }
